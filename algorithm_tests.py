@@ -45,8 +45,8 @@ class TestSortingAlgorithm(unittest.TestCase):
                 logging.info(f"Test test_sorting_algorithm_positive is passed, "
                              f"initial values: '{testcase['objectstest']}', result: '{assertion}'")
             except:
-                logging.error(f"in test_sorting_algorithm_positive Value is {assertion}, "
-                              f"Should be {testcase['result']}")
+                logging.error(f"in test_sorting_algorithm_positive if failed, Value is {assertion}, "
+                              f"Should be {testcase['result']}, order is {orders}, check order is {check}")
 
 
 # Тесты для негативных ситуаций в поле ввода данных для сортировки
@@ -73,7 +73,8 @@ class TestSortingAlgorithmNegativeInput(unittest.TestCase):
                              f"initial values: '{testcase['objectstest']}', result: {sorted_objects}")
             except:
                 logging.error(
-                    f"in test_sorting_algorithm_positive Value is {sorted_objects}, Should be {testcase['result']}")
+                    f"in test_sorting_algorithm_positive is failed, Value is {sorted_objects}, "
+                    f"Should be {testcase['result']}, order is {orders} check order is {check}")
 
 
 # Тесты для негативных ситуаций в поле выбора последовательности сортировки
@@ -89,7 +90,7 @@ class TestSortingAlgorithmNegativeOrder(unittest.TestCase):
                 logging.info(f"Test test_sorting_algorithm_negative_order is passed, "
                              f"initial values: '{testcase['order']}', result: {testcase['result']}")
             except:
-                logging.error(f"in test_sorting_algorithm_positive Value is {check.check()}, "
+                logging.error(f"in test_sorting_algorithm_positive is failed, Value is {check.check()}, "
                               f"Should be {testcase['result']}")
         logging.debug("TESTS END")
 

@@ -48,8 +48,6 @@ class ColorOrder:
                 red_elements.append(obj)
             elif obj.color == "з":
                 green_elements.append(obj)
-            elif obj.color == "":
-                return "Error: Неверный формат ввода данных для сортировки"
             else:
                 return "Error: Неверный формат ввода данных для сортировки"
 
