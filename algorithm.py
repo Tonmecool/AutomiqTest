@@ -37,7 +37,7 @@ class ColorOrder:
         red_elements = []
         green_elements = []
 
-        if len(self.objects) < 3:
+        if len(self.objects) < 1:
             return "Error: Неверный формат ввода данных для сортировки"
 
         # Разбитие строки на 3 массива

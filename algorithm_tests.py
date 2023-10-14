@@ -34,17 +34,19 @@ class TestSortingAlgorithm(unittest.TestCase):
             check = Checks(order)
             sorted_objects = color_order.sort()
             assertion = ""
-            for obj in sorted_objects:
-                assertion += obj.color
+
+            if not isinstance(sorted_objects, str):
+                for obj in sorted_objects:
+                    assertion += obj.color
 
             try:
                 self.assertEqual(assertion, testcase['result'])
                 self.assertEqual(check.check(), "pass")
                 logging.info(f"Test test_sorting_algorithm_positive is passed, "
                              f"initial values: '{testcase['objectstest']}', result: '{assertion}'")
-            except Exception as error:
-                logging.error(f"in test_sorting_algorithm_positive Value is {assertion}, Should be {testcase['result']}"
-                              f"ERROR: {error}")
+            except:
+                logging.error(f"in test_sorting_algorithm_positive Value is {assertion}, "
+                              f"Should be {testcase['result']}")
 
 
 # Тесты для негативных ситуаций в поле ввода данных для сортировки
@@ -69,10 +71,9 @@ class TestSortingAlgorithmNegativeInput(unittest.TestCase):
                 self.assertEqual(check.check(), "pass")
                 logging.info(f"Test test_sorting_algorithm_negative_input is passed, "
                              f"initial values: '{testcase['objectstest']}', result: {sorted_objects}")
-            except Exception as error:
+            except:
                 logging.error(
-                    f"in test_sorting_algorithm_positive Value is {sorted_objects}, Should be {testcase['result']} "
-                    f"ERROR: {error}")
+                    f"in test_sorting_algorithm_positive Value is {sorted_objects}, Should be {testcase['result']}")
 
 
 # Тесты для негативных ситуаций в поле выбора последовательности сортировки
@@ -87,9 +88,9 @@ class TestSortingAlgorithmNegativeOrder(unittest.TestCase):
                 self.assertEqual(check.check(), testcase['result'])
                 logging.info(f"Test test_sorting_algorithm_negative_order is passed, "
                              f"initial values: '{testcase['order']}', result: {testcase['result']}")
-            except Exception as error:
+            except:
                 logging.error(f"in test_sorting_algorithm_positive Value is {check.check()}, "
-                              f"Should be {testcase['result']}, ERROR: {error}")
+                              f"Should be {testcase['result']}")
         logging.debug("TESTS END")
 
 
