@@ -46,7 +46,7 @@ class TestSortingAlgorithm(unittest.TestCase):
                              f"initial values: '{testcase['objectstest']}', result: '{assertion}'")
             except:
                 logging.error(f"in test_sorting_algorithm_positive if failed, Value is {assertion}, "
-                              f"Should be {testcase['result']}, order is {orders}, check order is {check}")
+                              f"Should be {testcase['result']}, order is {orders}, check order is {check.check()}")
 
 
 # Тесты для негативных ситуаций в поле ввода данных для сортировки
@@ -74,7 +74,7 @@ class TestSortingAlgorithmNegativeInput(unittest.TestCase):
             except:
                 logging.error(
                     f"in test_sorting_algorithm_positive is failed, Value is {sorted_objects}, "
-                    f"Should be {testcase['result']}, order is {orders} check order is {check}")
+                    f"Should be {testcase['result']}, order is {orders} check order is {check.check()}")
 
 
 # Тесты для негативных ситуаций в поле выбора последовательности сортировки
