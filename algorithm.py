@@ -6,7 +6,8 @@ class Object:
         return self.color
 
 
-class InputOrderCheck:
+# Класс для проверок
+class Checks:
     def __init__(self, input_order):
         self.input_order = input_order
 
@@ -27,6 +28,7 @@ class ColorOrder:
         self.objects = objects
         self.order = order
 
+    # Сортировка
     def sort(self):
         # Я бы использовал такую сортировку
         # return sorted(objects, key=lambda obj: self.order.index(obj.color))
@@ -38,6 +40,7 @@ class ColorOrder:
         if len(self.objects) < 3:
             return "Error: Неверный формат ввода данных для сортировки"
 
+        # Разбитие строки на 3 массива
         for obj in self.objects:
             if obj.color == "с":
                 blue_elements.append(obj)
@@ -50,6 +53,7 @@ class ColorOrder:
             else:
                 return "Error: Неверный формат ввода данных для сортировки"
 
+        # Слияние
         output = []
         if self.order[0] == "с":
             output.extend(blue_elements)
@@ -77,11 +81,3 @@ class ColorOrder:
                 output.extend(red_elements)
 
         return output
-
-
-if __name__ == "__main__":
-    objects = [Object("з"), Object("с"), Object("к"), Object("к"), Object("з"), Object("с"), Object("з"), Object("к")]
-    color_order = ColorOrder(objects, ["с", "к", "з"])
-
-    sorted_objects = color_order.sort()
-    print(sorted_objects)

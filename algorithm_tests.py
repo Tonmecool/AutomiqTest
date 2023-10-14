@@ -1,7 +1,7 @@
 import logging
 import unittest
 import json
-from algorithm import Object, ColorOrder, InputOrderCheck
+from algorithm import Object, ColorOrder, Checks
 
 # Настройка логгера
 logging.basicConfig(level=logging.DEBUG, filename="logging.log", filemode="w",
@@ -17,6 +17,7 @@ with open('negative_order_testcases.json', encoding='utf-8') as f:
     negative_order_testcases = json.load(f)
 
 
+# Тесты для позитивных ситуаций
 class TestSortingAlgorithm(unittest.TestCase):
     def test_sorting_algorithm_positive(self):
         logging.debug("TESTS START")
@@ -30,7 +31,7 @@ class TestSortingAlgorithm(unittest.TestCase):
             for obj in orders:
                 order.append(obj)
             color_order = ColorOrder(objects, order)
-            check = InputOrderCheck(order)
+            check = Checks(order)
             sorted_objects = color_order.sort()
             assertion = ""
             for obj in sorted_objects:
@@ -46,6 +47,7 @@ class TestSortingAlgorithm(unittest.TestCase):
                               f"ERROR: {error}")
 
 
+# Тесты для негативных ситуаций в поле ввода данных для сортировки
 class TestSortingAlgorithmNegativeInput(unittest.TestCase):
     def test_sorting_algorithm_negative_input(self):
         logging.info("********************************************************************")
@@ -59,7 +61,7 @@ class TestSortingAlgorithmNegativeInput(unittest.TestCase):
             for obj in orders:
                 order.append(obj)
             color_order = ColorOrder(objects, order)
-            check = InputOrderCheck(order)
+            check = Checks(order)
             sorted_objects = color_order.sort()
 
             try:
@@ -73,12 +75,13 @@ class TestSortingAlgorithmNegativeInput(unittest.TestCase):
                     f"ERROR: {error}")
 
 
+# Тесты для негативных ситуаций в поле выбора последовательности сортировки
 class TestSortingAlgorithmNegativeOrder(unittest.TestCase):
     def test_sorting_algorithm_negative_order(self):
         logging.info("********************************************************************")
         for testcase in negative_order_testcases:
             orders = testcase['order']
-            check = InputOrderCheck(orders)
+            check = Checks(orders)
 
             try:
                 self.assertEqual(check.check(), testcase['result'])
@@ -87,6 +90,7 @@ class TestSortingAlgorithmNegativeOrder(unittest.TestCase):
             except Exception as error:
                 logging.error(f"in test_sorting_algorithm_positive Value is {check.check()}, "
                               f"Should be {testcase['result']}, ERROR: {error}")
+        logging.debug("TESTS END")
 
 
 if __name__ == "__main__":

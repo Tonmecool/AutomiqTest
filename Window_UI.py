@@ -4,7 +4,7 @@
 import random
 from PyQt6 import QtCore, QtWidgets
 from PyQt6.QtWidgets import QMessageBox
-from algorithm import Object, ColorOrder, InputOrderCheck
+from algorithm import Object, ColorOrder, Checks
 
 
 class Ui_MainWindow(object):
@@ -65,7 +65,7 @@ class Ui_MainWindow(object):
     def on_ButtonSort_clicked(self):
         objects = []
         order = [self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_3.text()]
-        check = InputOrderCheck(order)
+        check = Checks(order)
 
         for c in self.Edit_Input.text():
             objects.append(Object(c))
