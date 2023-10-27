@@ -1,25 +1,27 @@
-2023-10-14 15:47:40,623 DEBUG TESTS START
-2023-10-14 15:47:40,623 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ззззззсссссскккк'
-2023-10-14 15:47:40,623 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ззззззкккксссссс'
-2023-10-14 15:47:40,623 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ккккззззззсссссс'
-2023-10-14 15:47:40,623 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ккккссссссзззззз'
-2023-10-14 15:47:40,624 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ссссссззззззкккк'
-2023-10-14 15:47:40,624 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ссссссккккзззззз'
-2023-10-14 15:47:40,624 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссс', result: 'ссс'
-2023-10-14 15:47:40,624 INFO Test test_sorting_algorithm_positive is passed, initial values: 'скскскск', result: 'кккксссс'
-2023-10-14 15:47:40,625 INFO ********************************************************************
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_input is passed, initial values: 'ссзс1кзззкксзсскз', result: Error: Неверный формат ввода данных для сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_input is passed, initial values: '', result: Error: Неверный формат ввода данных для сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_input is passed, initial values: '                       ', result: Error: Неверный формат ввода данных для сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_input is passed, initial values: 'кз с', result: Error: Неверный формат ввода данных для сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_input is passed, initial values: 'ккзз
+2023-10-23 17:06:10,919 DEBUG TESTS START
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'кс', result: 'кс'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'с', result: 'с'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ззззззсссссскккк'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ззззззкккксссссс'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ккккззззззсссссс'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ккккссссссзззззз'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ссссссззззззкккк'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссзскзззкксзсскз', result: 'ссссссккккзззззз'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'ссс', result: 'ссс'
+2023-10-23 17:06:10,920 INFO Test test_sorting_algorithm_positive is passed, initial values: 'скскскск', result: 'кккксссс'
+2023-10-23 17:06:10,921 INFO ********************************************************************
+2023-10-23 17:06:10,921 INFO Test test_sorting_algorithm_negative_input is passed, initial values: 'ссзс1кзззкксзсскз', result: Error: Неверный формат ввода данных для сортировки
+2023-10-23 17:06:10,921 INFO Test test_sorting_algorithm_negative_input is passed, initial values: '', result: Error: Неверный формат ввода данных для сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_input is passed, initial values: '                       ', result: Error: Неверный формат ввода данных для сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_input is passed, initial values: 'кз с', result: Error: Неверный формат ввода данных для сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_input is passed, initial values: 'ккзз
 сс', result: Error: Неверный формат ввода данных для сортировки
-2023-10-14 15:47:40,625 INFO ********************************************************************
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'зк', result: Error: Неверный формат ввода последовательности сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'сз1', result: Error: Неверный формат ввода последовательности сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_order is passed, initial values: '', result: Error: Неверный формат ввода последовательности сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_order is passed, initial values: '   ', result: Error: Неверный формат ввода последовательности сортировки
-2023-10-14 15:47:40,625 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'кз с', result: Error: Неверный формат ввода последовательности сортировки
-2023-10-14 15:47:40,626 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'к
+2023-10-23 17:06:10,933 INFO ********************************************************************
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'зк', result: Error: Неверный формат ввода последовательности сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'сз1', result: Error: Неверный формат ввода последовательности сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_order is passed, initial values: '', result: Error: Неверный формат ввода последовательности сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_order is passed, initial values: '   ', result: Error: Неверный формат ввода последовательности сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'кз с', result: Error: Неверный формат ввода последовательности сортировки
+2023-10-23 17:06:10,933 INFO Test test_sorting_algorithm_negative_order is passed, initial values: 'к
 зс', result: Error: Неверный формат ввода последовательности сортировки
-2023-10-14 15:47:40,626 DEBUG TESTS END
+2023-10-23 17:06:10,940 DEBUG TESTS END
